@@ -221,6 +221,7 @@ message("Library name of pthreads-win32: ${PTHREADS_LIBRARY}.")
 set(CMAKE_DEBUG_POSTFIX d)
 
 add_definitions(/DHAVE_PTW32_CONFIG_H)
+add_definitions(-DHAVE_STRUCT_TIMESPEC)
 
 include_directories(${PTHREADS_SOURCE_DIR})
 add_library(${PTHREADS_LIBRARY} ${PTHREADS_LIBTYPE} ${PTHREAD_SOURCES} ${PTHREAD_API} ${PTHREAD_RESOURCES})
